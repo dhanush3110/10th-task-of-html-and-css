@@ -1,0 +1,113 @@
+
+1.)design the below equation using html and css.
+
+html code!
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="STYLE.CSS">
+    <script src=script2.js></script>
+    <title>Document</title>
+</head>
+<body>
+    <p>hi welcome to the page!</p><br>
+    <div class="container">
+       <img src="https://camo.githubusercontent.com/05c4f4242bed2d23c399e38527c4ab93609e59d5aa8f451ad49bd26060bb8f45/68747470733a2f2f692e696e73696465722e636f6d2f3466663137386132363962656464366631383030303030663f77696474683d36303026666f726d61743d6a706567266175746f3d77656270" alt="image loading" width="500px" height="500px">
+    </div>
+  
+<footer class="footer">
+    <img src="https://camo.githubusercontent.com/da092347de875d0327cd7419f20b2af6866b43deafeeddd038e7428b0938ad13/68747470733a2f2f656e637279707465642d74626e302e677374617469632e636f6d2f696d616765733f713d74626e253341414e6439476352315775514c486a616f71464c5142564a54506d71564736576649774b326a447866315241796343514a4a6875686a69743626757371703d434155" alt="Guvi">
+</footer>
+
+</body>
+</html>
+
+
+
+css code!
+
+p{
+    font-style: italic;
+    font-weight:bold;
+    color:blue;
+    font-size:80px;
+    text-align:center;
+    transition:all 0.3s ease;
+    transition-delay:2s;
+    
+}
+body{
+    background-color:yellowgreen;
+}
+
+.container{
+        width:500px;
+        height:500px;
+        display:flex;
+        float:left;
+        margin:50px;
+        padding:5px;
+        border:5px solid #bcee08;
+        background-color: aqua;
+        border-radius:50;
+        -moz-border-radius:20px 20px;
+        -webkit-border-radius:20px 20px;
+         position:absolute;
+         top:15%;
+         left:35%;
+         font-size:20px;
+         cursor:crosshair;
+         border: 1px dashed #000;
+         transform:translate(50px,50px);
+         
+    }
+
+p:hover{
+    font-size:30px;
+    color:rgb(212, 17, 17);
+    font-family:verdana,sans-serif;
+}
+
+
+.container:hover{
+    background-color:blueviolet;
+    width:500px;
+}
+
+.container::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: rgb(157, 12, 12);
+    color: white;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+
+.container:hover::before{
+    opacity: 1;
+    visibility: visible;
+}
+
+.footer img{
+    width:200px;
+    height:100px;
+    position:absolute;
+    top:5%;
+    left:85%;  
+    
+}
+
+
+
+
